@@ -1,0 +1,503 @@
+.top {
+    background-color: black;
+    height: 50px;
+  }
+
+  .f-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .f-li {
+    position: relative;
+    display: inline;
+    text-align: center;
+    margin-right: 20px; /* Add space between each list item */
+    margin-left: 20px;
+    top:15px;
+    color: aliceblue;
+  }
+
+  .f-li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+  }
+  .f-li a {
+color: white; /* Change the text color */
+text-decoration: none; /* Remove underline from links */
+padding: 10px; /* Add padding for better click area */
+transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+.f-li a:hover {
+color: black; /* Change text color on hover */
+background-color: white; /* Change background color on hover */
+}
+
+@media (max-width: 600px) {
+/* Adjust styles for smaller screens */
+.top {
+  display: none; /* Hide the navigation bar */
+}
+}
+.second-divi{
+    height: 40px;
+}
+.second-divi {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+  }
+
+  /* Style for the button */
+  .exp {
+    margin-left: 20px;
+    padding: 7px 20px;
+    font-size: 16px;
+    height: 40px;
+    position: relative;top:14px;left:10px;background-color:rgb(63, 75, 215);color: azure;;border-radius: 6px;
+  }
+  
+  .exp:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+  .search-container {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    left:200px;
+    top:15px;
+  }
+  .search-input {
+    width: 100%;
+    padding: 8px 30px 8px 10px; /* Adjust padding for text input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Make sure padding is included in width */
+  }
+  .c-head{
+    position:relative;
+    color:rgb(63, 75, 215);
+    top:10px;
+  font-size: 49px;
+    left:-90px;
+  }
+  .search-icon {
+    position: absolute;
+    top: 1px;
+    right: px;
+   
+    height:32px;
+    width:32px;
+    background-color:rgb(63, 75, 215) ;
+  }
+  .up-down-arrow {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Adjust size of arrow head */
+    border-right: 5px solid transparent; /* Adjust size of arrow head */
+    cursor: pointer;
+    left:410px;
+    
+    top:20px;
+  }
+  .up-down-arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Adjust size of arrow head */
+    border-right: 5px solid transparent; /* Adjust size of arrow head */
+    border-bottom: 8px solid black; /* Adjust size and color of arrow */
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  .upside-down {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .jn{
+  
+      position: relative;
+      margin-left: 20px;
+      padding: 7px 20px;
+      font-size: 16px;
+      height: 40px;
+      top: 14px;
+      left: 470px; /* Adjust this value as needed */
+      background-color: rgb(63, 75, 215);
+      color: azure;
+      border-radius: 6px;
+    }
+    .jn:hover{
+      background-color: aliceblue;
+    color: black;
+    }
+   
+    .exp{
+      display: none;
+    }
+    .c-head{
+      position: relative;
+      left:120px;
+    }
+      /* Show other elements on smaller screens */
+     
+    
+    .container {
+      display: flex;
+      overflow: hidden;
+      /* Aligns items to the top */
+    }
+
+    .filter-section {
+      width: 200px; /* Adjust the width for your filters */
+      /* Add styling for your filter section */
+    }
+
+    .card-container {
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Space between cards */
+      justify-content: flex-end; /* Align cards to the right */
+      width: calc(100% - 200px); /* Adjust width to accommodate filters */
+      /* Additional styling for your cards */
+
+    }
+
+    .card {
+      position: relative;
+      top: 40px;
+      flex: 0 0 calc(30.33% - 26.67px); /* Adjusted card width considering the space between */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      /* Additional styling for your cards */
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Additional styling for layout adjustment */
+  
+    .m-c{
+      position: relative;
+      left:280px;
+    }
+    .card:hover {
+      transform: scale(1.06); /* Scale the card slightly on hover */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a box shadow for emphasis */
+    }
+    .filter{
+      position: relative;
+      left:-1400px;
+      top:20px;
+    }
+    .square-radio input[type="radio"] {
+      display: none;
+  }
+
+  .square-radio label {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      font-size: 16px; /* Adjust the font size here */
+      margin-bottom: 8px; /* Add spacing between options */
+      padding-left: 28px; /* Create space for the box */
+  }
+
+  .square-radio label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border: 1px solid #000;
+      position: absolute;
+      left: 0;
+      top: 0;
+  }
+
+  /* Change color for both label and box when checked */
+  .square-radio input[type="radio"]:checked + label::before {
+      background-color: #000;
+  }
+
+  .square-radio input[type="radio"]:checked + label {
+      color: #000;
+  }
+  .footContent1{
+  position: relative;
+  left:-1300px;
+  top:160px;
+}
+.footContent2{
+  position: relative;
+  left:-900px;
+  top:-30px;
+}
+.footContent3{
+  position: relative;
+  left:-500px;
+  top:-190px;
+}
+.footContent4{
+  position: relative;
+  left:-100px;
+  top:-370px;
+}
+.heading-res{
+  position: relative;font-size: 30px;left:410px;top:51px;
+}
+/* NEW FROM HERE* 
+/* Example styles for responsiveness */
+
+@media only screen and (min-width: 201px) and (max-width: 991px) {
+  /* Hide search container on smaller screens */
+  .top{
+    display: none;
+  }
+  .c-head{
+    position:relative;
+    left:100px;
+  }
+  .exp{
+    display: none;
+  }
+  .search-container{
+    display: none;
+  }
+  .up-down-arrow{
+    display: none;
+  }
+  .jn{
+    display: none;
+  }
+  .d1{
+    display: none;
+  }
+  .d2{
+    display: none;
+  }
+  
+  .d3{
+    display: none;
+  }
+  .heading-res{
+    position: relative;
+    left:20px;
+    top:-6px;
+  }
+  .card-container{
+    display: flex; /* Display the cards in a row by default */
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; 
+  }
+  .card{
+    position: relative;
+    width: 300px; /* Set the width of each card */
+    margin-bottom: 20px; /* Add space between the cards */
+    left: -370px; /* Adjust the horizontal position if needed */
+  }
+  .filter{
+    position: relative;
+    top:-2500px;
+    left:70px;
+  }
+  .end{
+    position: relative;
+    top:1000px;
+  }
+  .icons{
+    position: relative;
+    top:300px;
+  }
+}
+/* Default styles for the side slider */
+/* Styles for the sidebar and top navigation */
+.sidebar {
+  display: none;
+  /* Other sidebar styles */
+}
+
+.top1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Other top navigation styles */
+}
+.filterButton{
+  display:none;
+}
+.filterdiv{
+  display : none;
+}
+/* Default styles for top navigation (hidden by default) */
+/* Default styles for sidebar (hidden by default) */
+/* Default styles for sidebar (hidden by default) */
+
+.sidebar {
+  display: none;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f1f1f1;
+  
+  padding: 10px 30px; /* Padding values (top/bottom, left/right) */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Sidebar content styles */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 22px; /* Adjust the space between list items */
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #000; /* Black text color */
+  display: block;
+  padding: 8px 0; /* Adjust the padding for each list item */
+}
+/* Show the sidebar when the 'show-sidebar' class is applied */
+.sidebar.show-sidebar {
+  display: block;
+
+}
+.topnavibar{
+display: none;
+top:-170px;
+padding:5px 7px;
+color:#110909;
+left:-40px;
+}
+.filterclose{
+  position: relative;
+  left:180px;
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 300px) and (max-width: 991px) {
+  .sidebar {
+    display: none; /* Hide the sidebar on larger screens */
+  }
+
+  .topnavibar {
+    display: block; /* Display button on smaller screens */
+    position: absolute;
+left:-240px;
+
+  }
+}
+.jn-1{
+  
+  position: relative;
+  margin-left: 20px;
+  padding: 7px 20px;
+  font-size: 16px;
+  height: 40px;
+  top: 14px;
+  left: -20px; /* Adjust this value as needed */
+  background-color: rgb(63, 75, 215);
+  color: azure;
+  border-radius: 6px;
+}
+.jn-1:hover{
+  background-color: aliceblue;
+color: black;
+}
+@media screen and (min-width: 300px) and (max-width: 991px) {
+  .filter{
+    display: none;
+  }
+  .filterButton{
+    display: block;
+  background-color: rgb(63, 75, 215);
+  padding: 10px 30px;
+  color: #fff; /* Set the text color to white */
+  position: absolute;
+  left: -60px;
+  top: -20px;
+  }
+  .filterButton:hover{
+    background-color: #f1f1f1;
+    color: #000;
+  }
+  .filterdiv.sidebar{
+    display: block;
+  }
+}
+.end1{
+  display: none;
+}
+.footerdiv{
+  display: none;
+}
+@media screen and (min-width: 300px) and (max-width: 991px) {
+  .footContent1{
+    display: block;
+    position: relative;
+    top:100px;
+    left:-220px;
+  }
+  .footContent2{
+    display: block;
+    position: relative;
+    top:200px;
+    left:-220px;
+  }
+  .footContent3{
+    display: block;
+    position: relative;
+    top:400px;
+    left:-220px;
+  }
+  .footContent4{
+    display: block;
+    position: relative;
+    top:500px;
+    left:-220px;
+  }
+  .popular{
+    display: none;
+  }
+  .popular2{
+  display: none;
+  }
+  .footerdiv{
+    display: block;
+   
+  }
+  .footerdiv .end1 {
+     /* Adjust positioning for smaller screens */
+     position:static;
+     top:800px;
+     left:-220px;
+  /* Ad margin for better spacing */
+  }
+
+  .footerdiv .icons {
+     /* Adjust positioning for smaller screens */
+     position:relative;
+     top:800px;
+     left:-175px; /* Center the icons */
+  }
+  .end1{
+    display: block;
+    position: relative;
+    top:700px;
+    left:-180px;
+  }
+}
