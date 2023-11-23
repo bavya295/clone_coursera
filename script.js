@@ -18,20 +18,40 @@ function toggleArrow(element) {
 
   // Function to toggle the checked state of the radio buttons
   
-
-  let clickCountLevel = 0;
+let clickCountLevel = 0;
 let clickCountDuration = 0;
+let prevLevel = null;
+let prevDuration = null;
 
 function toggleCheckedState(radioButton, type) {
     if (type === 'level') {
         clickCountLevel++;
-        radioButton.checked = clickCountLevel % 2 !== 0;
+        if (prevLevel === radioButton) {
+            radioButton.checked = clickCountLevel % 2 !== 0;
+        } else {
+            if (prevLevel !== null) {
+                prevLevel.checked = false; // Unchecking the previously checked level button
+            }
+            clickCountLevel = 1; // Reset the count for the new level button
+            radioButton.checked = true;
+            prevLevel = radioButton; // Set the current button as the new previous level button
+        }
     } else if (type === 'duration') {
         clickCountDuration++;
-        radioButton.checked = clickCountDuration % 2 === 1;
+        if (prevDuration === radioButton) {
+            radioButton.checked = clickCountDuration % 2 === 1;
+        } else {
+            if (prevDuration !== null) {
+                prevDuration.checked = false; // Unchecking the previously checked duration button
+            }
+            clickCountDuration = 1; // Reset the count for the new duration button
+            radioButton.checked = true;
+            prevDuration = radioButton; // Set the current button as the new previous duration button
+        }
     }
     filterF();
 }
+
   
 
 
