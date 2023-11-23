@@ -20,18 +20,18 @@ function toggleArrow(element) {
   
 
   let clickCountLevel = 0;
-  let clickCountDuration = 0;
-  
-  function toggleCheckedState(radioButton, type) {
-      if (type === 'level') {
-          clickCountLevel++;
-          radioButton.checked = clickCountLevel % 2 === 1;
-      } else if (type === 'duration') {
-          clickCountDuration++;
-          radioButton.checked = clickCountDuration % 2 === 1;
-      }
-      filterF();
-  }
+let clickCountDuration = 0;
+
+function toggleCheckedState(radioButton, type) {
+    if (type === 'level') {
+        clickCountLevel++;
+        radioButton.checked = clickCountLevel % 2 !== 0;
+    } else if (type === 'duration') {
+        clickCountDuration++;
+        radioButton.checked = clickCountDuration % 2 === 1;
+    }
+    filterF();
+}
   
 
 
