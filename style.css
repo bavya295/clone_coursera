@@ -504,3 +504,45 @@ color: black;
     left:-180px;
   }
 }
+@media screen and (min-width: 300px) and (max-width: 991px) {
+  .square-radio input[type="radio"] {
+    display: block;
+    opacity: 0.5;
+    position: relative;
+    top:30px;
+    background-color: #ccc;
+}
+
+.square-radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px; /* Adjust the font size here */
+  margin-bottom: 8px; /* Add spacing between options */
+  padding-left: 28px; /* Create space for the box */
+}
+
+.square-radio label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Change color for both label and box when checked */
+.square-radio input[type="radio"]:checked + label::before {
+    background-color: #000;
+}
+
+.square-radio input[type="radio"]:checked + label {
+    color: #000;
+}
+
+}
+
+
